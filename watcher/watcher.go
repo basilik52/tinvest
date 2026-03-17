@@ -65,7 +65,6 @@ func (w *Watcher) run() {
 		case <-ticker.C:
 			if err := w.checkNewOperations(); err != nil {
 				log.Printf("Error checking operations: %v", err)
-				w.notifier.NotifyConnectionError(err)
 			}
 		}
 	}
