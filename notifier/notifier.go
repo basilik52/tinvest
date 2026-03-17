@@ -75,8 +75,8 @@ func (n *Notifier) NotifyConnectionError(err error) error {
 	if err == nil {
 		return errors.New("error is nil")
 	}
-	text := n.formatter.FormatConnectionError(err)
-	_, err = n.bot.SendMessage(text)
+	//_ := n.formatter.FormatConnectionError(err)
+	//_, err = n.bot.SendMessage(text)
 	return err
 }
 
